@@ -27,7 +27,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "StubController.h"
+#include "stubcontroller.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -153,7 +153,7 @@ void StubController::set(const char* key, void* value, const DataType &type) con
     else
     {
         strncpy( tempContent, content, pos - content);
-        strcpy(tempContent, keyValue);
+        strcat(tempContent, keyValue);
 
         while( *pos != '\n' )
         {
